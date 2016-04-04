@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="login_background">#80BFA2</color>
-    <color name="white_text">#ECF2DF</color>
-    <color name="register_background">#D99E91</color>
-    <color name="hint_color">#999999</color>
-    <color name="button_change_color">#FF8878</color>
+    <color name="mint">#80BFA2</color>
+    <color name="nice_white">#ECF2DF</color>
+    <color name="light_pink">#D99E91</color>
+    <color name="light_gray">#999999</color>
+    <color name="pink">#FF8878</color>
 </resources>

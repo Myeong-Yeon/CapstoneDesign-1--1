@@ -2,20 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff">
+    android:background="@color/mint"
+    android:layout_gravity="center">
 
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/logo" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="150dp"
         android:gravity="center_horizontal"
         android:text="인서울 이공계 취준생들을"
         android:textColor="#454545"
@@ -25,7 +27,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="120dp"
         android:gravity="center_horizontal"
         android:text="위한 취업 스펙 비교 앱!"
         android:textColor="#454545"

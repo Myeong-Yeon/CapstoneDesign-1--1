@@ -15,8 +15,8 @@ import android.widget.Toast;
  * Created by imsuyeon on 16. 4. 2..
  */
 public class LoginActivity extends Fragment implements View.OnClickListener {
-    Button login;
-    TextView register, findPW;
+    Button buttonLogin;
+    TextView textViewRegister, textViewFindPW;
     EditText editTextID, editTextPW;
 
     private View mainView;
@@ -30,14 +30,14 @@ public class LoginActivity extends Fragment implements View.OnClickListener {
     }
 
     private void initView(View v) {
-        login = (Button) v.findViewById(R.id.button_login);
-        register = (TextView) v.findViewById(R.id.register);
-        findPW = (TextView) v.findViewById(R.id.find_password);
+        buttonLogin = (Button) v.findViewById(R.id.button_login);
+        textViewRegister = (TextView) v.findViewById(R.id.register);
+        textViewFindPW = (TextView) v.findViewById(R.id.find_password);
         editTextID = (EditText) v.findViewById(R.id.login_id);
         editTextPW = (EditText) v.findViewById(R.id.login_password);
-        login.setOnClickListener(this);
-        register.setOnClickListener(this);
-        findPW.setOnClickListener(this);
+        buttonLogin.setOnClickListener(this);
+        textViewRegister.setOnClickListener(this);
+        textViewFindPW.setOnClickListener(this);
     }
 
     @Override
