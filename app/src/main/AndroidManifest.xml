@@ -19,6 +19,8 @@
             android:name=".SplashActivity"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity android:name=".HomeActivity" />
+        <activity android:name=".FindPasswordActivity" />
+        <activity android:name=".RegisterActivity" />
     </application>
 
 </manifest>

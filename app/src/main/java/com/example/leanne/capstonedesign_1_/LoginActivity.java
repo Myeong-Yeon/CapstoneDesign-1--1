@@ -31,10 +31,10 @@ public class LoginActivity extends Fragment implements View.OnClickListener {
 
     private void initView(View v) {
         buttonLogin = (Button) v.findViewById(R.id.button_login);
-        textViewRegister = (TextView) v.findViewById(R.id.register);
-        textViewFindPW = (TextView) v.findViewById(R.id.find_password);
-        editTextID = (EditText) v.findViewById(R.id.login_id);
-        editTextPW = (EditText) v.findViewById(R.id.login_password);
+        textViewRegister = (TextView) v.findViewById(R.id.textView_register);
+        textViewFindPW = (TextView) v.findViewById(R.id.textView_find_pw);
+        editTextID = (EditText) v.findViewById(R.id.editText_id);
+        editTextPW = (EditText) v.findViewById(R.id.editText_pw);
         buttonLogin.setOnClickListener(this);
         textViewRegister.setOnClickListener(this);
         textViewFindPW.setOnClickListener(this);
@@ -69,6 +69,17 @@ public class LoginActivity extends Fragment implements View.OnClickListener {
                     editTextID.setText("");
                     editTextPW.setText("");
                 }
+                break;
+            case R.id.textView_register:
+                Intent intentRegister = new Intent(getActivity(), RegisterActivity.class);
+                startActivity(intentRegister);
+                getActivity().overridePendingTransition(R.anim.animation_enter_right2left,
+                        R.anim.animation_leave_right2left);
+                break;
+            case R.id.textView_find_pw:
+                Intent intentFindPW = new Intent(getActivity(), FindPasswordActivity.class);
+                startActivity(intentFindPW);
+                getActivity().overridePendingTransition(R.anim.animation_enter_right2left, R.anim.animation_leave_right2left);
                 break;
         }
     }
