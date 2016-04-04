@@ -46,14 +46,15 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
                 if (inputID.equals("") || inputPW.equals("") || confirmPassword.equals("")
                         || inputName.equals("")) {
                     Toast.makeText(getApplicationContext(), "입력되지 않은 부분이 있습니다.", Toast.LENGTH_LONG).show();
-                }
-                if (!inputPW.equals(confirmPassword)) {
-                    Toast.makeText(getApplicationContext(), "비밀번호가 일치하지 않습니다.", Toast.LENGTH_LONG).show();
                 } else {
-                    // SAVE USER INFO INTO DB
-                    Toast.makeText(getApplicationContext(), "계정만들기 성공!", Toast.LENGTH_LONG).show();
-                    this.finish();
-                    overridePendingTransition(R.anim.animation_enter_left2right, R.anim.animation_leave_left2right);
+                    if (!inputPW.equals(confirmPassword)) {
+                        Toast.makeText(getApplicationContext(), "비밀번호가 일치하지 않습니다.", Toast.LENGTH_LONG).show();
+                    } else {
+                        // SAVE USER INFO INTO DB
+                        Toast.makeText(getApplicationContext(), "계정만들기 성공!", Toast.LENGTH_LONG).show();
+                        this.finish();
+                        overridePendingTransition(R.anim.animation_enter_left2right, R.anim.animation_leave_left2right);
+                    }
                 }
                 break;
         }
