@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mint"
@@ -20,18 +19,42 @@
         android:singleLine="true"
         android:textColorHint="@color/light_gray" />
 
-    <EditText
-        android:id="@+id/editText_id"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/white"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        android:hint="아이디"
-        android:inputType="textVisiblePassword"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColorHint="@color/light_gray" />
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/button_check_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/white"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:text="중복확인"
+            android:textColor="@color/mint" />
+
+        <LinearLayout
+            android:id="@+id/empty_space"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_check_id"
+            android:orientation="horizontal" />
+
+        <EditText
+            android:id="@+id/editText_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/empty_space"
+            android:background="@android:color/white"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            android:hint="아이디"
+            android:inputType="textVisiblePassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorHint="@color/light_gray" />
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/editText_pw"
