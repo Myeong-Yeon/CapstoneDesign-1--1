@@ -1,6 +1,7 @@
 package com.example.leanne.capstonedesign_1_;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -52,8 +53,11 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
                     } else {
                         // SAVE USER INFO INTO DB
                         Toast.makeText(getApplicationContext(), "계정만들기 성공!", Toast.LENGTH_LONG).show();
+                        // this.finish();
+                        Intent intentExtraInfo = new Intent(RegisterActivity.this, ExtraInfoActivity.class);
+                        startActivity(intentExtraInfo);
+                        overridePendingTransition(R.anim.animation_enter_right2left, R.anim.animation_leave_right2left);
                         this.finish();
-                        overridePendingTransition(R.anim.animation_enter_left2right, R.anim.animation_leave_left2right);
                     }
                 }
                 break;
